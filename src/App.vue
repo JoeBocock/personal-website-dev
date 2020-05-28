@@ -1,16 +1,16 @@
 <template>
     <div id="app" class="container">
         <section id="header">
-            <PageTitle title="Joe Bocock, software developer." />
+            <PageTitle title="Joe Bocock" />
             <hr>
             <Navbar></Navbar>
             <hr>
         </section>
 
         <section id="content">
-            <content-container :content="content[activeContent]"/>
+            <content-container :currentContent="activeContent"/>
             <hr class="bottom-hr">
-            <DesktopInput/>
+            <DesktopInput ref="desktopInput"/>
         </section>
 
         <section id="footer">
@@ -25,6 +25,8 @@ import Navbar from './components/Navbar.vue'
 import ContentContainer from './components/ContentContainer.vue'
 import DesktopInput from './components/DesktopInput.vue'
 import VersionFooter from './components/VersionFooter.vue'
+import confetti from 'canvas-confetti'
+
 
 export default {
     name: 'App',
@@ -39,15 +41,40 @@ export default {
         return {
             version: "3.0",
             activeContent: 1,
-            content: {
-                1: `I feel like these introductions are normally cheesy, an attempt at humour or too much information at once. Or maybe the mere fact that I acknowledged this paragraph like this makes it cheesier than anything else I could've said. Huh.
-                    <br>
-                    <br>
-                    I'm not great at introducing myself as you can probably tell. Regardless, my name's Joe.
-                    <br>
-                    <br>
-                    Developing from an early love of hardware, my passion for tech has been something that's followed me my entire life.`
-            }
+            confetti: confetti.create(document.getElementById("content"), { resize: true }),
+        }
+    },
+    methods: {
+        activateContent(contentId) {
+            this.activeContent = contentId;
+        },
+        focusInput() {
+            this.$refs.desktopInput.$el.focus();
+        },
+        fireConfetti() {
+            let end = Date.now() + (15 * 30);
+            let color = ['#bb0000'];
+
+            (function frame() {
+                confetti({
+                    particleCount: 1,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: color
+                });
+                confetti({
+                    particleCount: 1,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: color
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
         }
     }
 }
