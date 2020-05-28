@@ -1,5 +1,5 @@
 <template>
-    <div class="center">
+    <div class="center" id="version-footer">
         <small> Version
             <span class="brand-color">
                 <strong>{{ version }}</strong>
