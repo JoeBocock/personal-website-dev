@@ -14,9 +14,6 @@ import NavbarItem from './NavbarItem.vue'
 
 export default {
     name: 'Navbar',
-    props: {
-        title: String
-    },
     components: {
         NavbarItem
     },
@@ -34,6 +31,7 @@ export default {
     methods: {
         activateChild(childId) {
             this.activeChild = childId;
+            this.$parent.activateContent(childId);
         }
     }
 }
