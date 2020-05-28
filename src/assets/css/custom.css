@@ -1,0 +1,110 @@
+/* General Styling */
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src:  url('./fonts/Raleway-Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+
+body {
+    color: #121314;
+}
+
+.vue-label {
+    color: #42b983;
+}
+
+.brand-color {
+    color: rgb(255, 167, 38);
+}
+
+.bottom-hr {
+    margin-bottom: 1rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.option {
+    cursor: pointer;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.9rem;
+}
+
+/* Title Styling */
+
+h2 {
+    font-weight: 100;
+}
+
+.title {
+    text-align: center;
+    margin-top: 15rem;
+    margin-bottom: 8rem;
+}
+
+.blink {
+  animation: blinker 1.2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Link Styling */
+
+#content a {
+    text-decoration: none;
+    color: #121314;
+    position: relative;
+}
+
+#content a:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 65%;
+    left: -0.1em;
+    right: 1em;
+    bottom: 0;
+    transition: all 150ms;
+    background-color: rgba(255, 167, 38, 0.5);
+}
+
+#content a:hover:after {
+    top: 0%;
+    right: -0.1em;
+}
+
+a.no-highlight {
+    text-decoration: none !important;
+}
+
+
+/* Input Styling */
+
+input[type="text"] {
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: none;
+}
