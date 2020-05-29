@@ -1,11 +1,19 @@
 <template>
     <section id="footer">
-        <div class="center" id="version-footer">
+        <div
+            id="version-footer"
+            class="center"
+        >
             <small> Version
                 <span class="brand-color">
                     <strong>{{ version }}</strong>
                 </span> | Powered by
-                <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" class="no-highlight">
+                <a
+                    href="https://vuejs.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="no-highlight"
+                >
                     <span class="vue-label">
                         <strong>Vue</strong>
                     </span>
@@ -19,7 +27,10 @@
 export default {
     name: 'SiteFooter',
     props: {
-        version: String
+        version: {
+            type: String,
+            required: true
+        }
     }
 }
 </script>
