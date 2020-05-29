@@ -1,7 +1,7 @@
 <template>
     <div id="app" class="container">
-        <SiteHeader/>
-        <SiteContent :activeContent="activeContent" />
+        <SiteHeader @showContent="activateContent"/>
+        <SiteContent :active-content="activeContent" />
         <SiteFooter :version="version"/>
     </div>
 </template>
