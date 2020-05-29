@@ -1,10 +1,11 @@
 <template>
     <div class="row center">
         <NavbarItem
-            :class="{ 'underline' : activeChild == item.id}"
             v-for="item in items"
             :item="item"
             :key="item.id"
+            @activateChild="activateChild"
+            :class="{ 'underline' : activeChild == item.id}"
         />
     </div>
 </template>
@@ -13,7 +14,7 @@
 import NavbarItem from './NavbarItem.vue'
 
 export default {
-    name: 'Navbar',
+    name: 'SiteNavbar',
     components: {
         NavbarItem
     },
@@ -31,7 +32,7 @@ export default {
     methods: {
         activateChild(childId) {
             this.activeChild = childId;
-            this.$parent.requestContent(childId);
+            this.$emit('requestContent', childId);
         }
     }
 }
