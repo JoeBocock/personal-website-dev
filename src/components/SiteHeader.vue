@@ -2,20 +2,20 @@
     <section id="header">
         <PageTitle :title="title" />
         <hr>
-        <Navbar/>
+        <SiteNavbar @requestContent="requestContent"/>
         <hr>
     </section>
 </template>
 
 <script>
 import PageTitle from './PageTitle.vue'
-import Navbar from './Navbar.vue'
+import SiteNavbar from './SiteNavbar.vue'
 
 export default {
     name: 'SiteHeader',
     components: {
         PageTitle,
-        Navbar
+        SiteNavbar
     },
     data: function() {
         return {
@@ -24,7 +24,7 @@ export default {
     },
     methods: {
         requestContent(childId) {
-            this.$parent.activateContent(childId);
+            this.$emit('showContent', childId);
         }
     }
 }
