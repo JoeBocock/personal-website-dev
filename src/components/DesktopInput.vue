@@ -1,18 +1,9 @@
 <template>
-    <input v-if="showInput" type="text">
+    <input v-if="!$isMobile" type="text">
 </template>
 
 <script>
 export default {
-    name: 'DesktopInput',
-    computed: {
-        showInput: function () {
-            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-    }
+    name: 'DesktopInput'
 }
 </script>
