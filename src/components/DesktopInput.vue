@@ -1,5 +1,8 @@
 <template>
-    <input v-if="!$isMobile" type="text">
+    <input
+        v-if="!$isMobile"
+        type="text"
+    >
 </template>
 
 <script>

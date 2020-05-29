@@ -1,9 +1,16 @@
 <template>
     <section id="content">
-        <ContentContainer :currentContent="activeContent"/>
+        <ContentContainer
+            @fireConfetti="fireConfetti"
+            @focusInput="focusInput"
+            :current-content="activeContent"
+        />
         <hr class="bottom-hr">
         <DesktopInput ref="desktopInput"/>
-        <hr class="bottom-hr" v-bind:class="{ invisible: !blinkingHR, blink: blinkingHR }">
+        <hr
+            v-bind:class="{ invisible: !blinkingHR, blink: blinkingHR }"
+            class="bottom-hr"
+        >
     </section>
 </template>
 
@@ -14,12 +21,16 @@ import confetti from 'canvas-confetti'
 
 export default {
     name: 'PageTitle',
-    props: {
-        activeContent: Number
-    },
     components: {
         ContentContainer,
         DesktopInput
+    },
+    props: {
+        activeContent: {
+            type: Number,
+            required: true,
+            validator: value => [1, 2, 3, 4].includes(value)
+        }
     },
     data: function() {
         return {

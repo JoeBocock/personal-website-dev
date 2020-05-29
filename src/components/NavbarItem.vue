@@ -1,6 +1,9 @@
 <template>
     <div class="three columns">
-        <span @click="notifyParent" class="option">{{ item.text }}</span>
+        <span
+            @click="notifyParent"
+            class="option"
+        >{{ item.text }}</span>
     </div>
 </template>
 
@@ -8,11 +11,15 @@
 export default {
     name: 'NavbarItem',
     props: {
-        item: Object
+        item: {
+            type: Object,
+            required: true,
+            validator: value => 'text' in value
+        }
     },
     methods: {
         notifyParent: function () {
-            this.$parent.activateChild(this.item.id);
+            this.$emit('activateChild', this.item.id);
         }
     }
 }

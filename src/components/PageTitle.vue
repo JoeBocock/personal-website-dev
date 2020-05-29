@@ -21,7 +21,11 @@ export default {
         VueTyper
     },
     props: {
-        title: String
+        title: {
+            type: String,
+            required: true,
+            validator: value => value.length < 20
+        }
     },
     data: function() {
         return {
