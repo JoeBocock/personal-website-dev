@@ -31,7 +31,7 @@ export default {
     methods: {
         activateChild(childId) {
             this.activeChild = childId;
-            this.$parent.activateContent(childId);
+            this.$parent.requestContent(childId);
         }
     }
 }
