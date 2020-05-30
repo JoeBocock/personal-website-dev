@@ -57,6 +57,11 @@ p {
     color: rgb(255, 167, 38);
 }
 
+.error-container {
+    text-align: center;
+    color: #fc2c03;
+}
+
 /* Title Styling */
 
 h2, h3, h4 {
