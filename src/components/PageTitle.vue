@@ -1,5 +1,5 @@
 <template>
-    <div class="title spoon">
+    <div class="title">
         <h2>{{ title }}</h2>
         <h4><vue-typer
             :text="typerItems"
