@@ -2,7 +2,10 @@
     <section id="header">
         <PageTitle :title="title" />
         <hr>
-        <SiteNavbar @requestContent="requestContent"/>
+        <SiteNavbar
+            @requestContent="requestContent"
+            :active-child="activeContent"
+        />
         <hr>
     </section>
 </template>
@@ -16,6 +19,9 @@ export default {
     components: {
         PageTitle,
         SiteNavbar
+    },
+    props: {
+        activeContent : Number
     },
     data: function() {
         return {

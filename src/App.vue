@@ -1,7 +1,13 @@
 <template>
     <div id="app" class="container">
-        <SiteHeader @showContent="activateContent"/>
-        <SiteContent :active-content="activeContent" />
+        <SiteHeader
+            @showContent="activateContent"
+            :active-content="activeContent"
+        />
+        <SiteContent
+            @commandRequest="activateContent"
+            :active-content="activeContent"
+        />
         <SiteFooter :version="version"/>
     </div>
 </template>
@@ -22,6 +28,11 @@ export default {
         return {
             version: "3.0",
             activeContent: 1,
+        }
+    },
+    watch: {
+        activeContent() {
+            window.scrollTo(0,0);
         }
     },
     methods: {

@@ -2,9 +2,9 @@
     <div class="row center">
         <NavbarItem
             v-for="item in items"
+            @activateChild="activateChild"
             :item="item"
             :key="item.id"
-            @activateChild="activateChild"
             :class="{ 'underline' : activeChild == item.id}"
         />
     </div>
@@ -18,9 +18,11 @@ export default {
     components: {
         NavbarItem
     },
+    props: {
+        activeChild: Number
+    },
     data: function() {
         return {
-            activeChild: 1,
             items: [
                 { id: 1, text: 'Bio' },
                 { id: 2, text: 'Experience' },
@@ -31,7 +33,6 @@ export default {
     },
     methods: {
         activateChild(childId) {
-            this.activeChild = childId;
             this.$emit('requestContent', childId);
         }
     }
