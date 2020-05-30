@@ -8,8 +8,12 @@
         <hr class="bottom-hr">
         <DesktopInput
             @commandLineRequest="passCommandLineRequest"
+            @commandLineError="commandLineError"
             ref="desktopInput"
         />
+        <div class="error-container">
+            {{ cliError }}
+        </div>
         <hr
             v-bind:class="{ invisible: !blinkingHR, blink: blinkingHR }"
             class="bottom-hr"
@@ -37,14 +41,23 @@ export default {
     },
     data: function() {
         return {
+            cliError: '',
             confetti: confetti.create(document.getElementById("content"), { resize: true }),
             blinkingHR: false
+        }
+    },
+    watch: {
+        activeContent() {
+            this.cliError = '';
         }
     },
     methods: {
         passCommandLineRequest(childId) {
             this.$refs.desktopInput.$refs.commandLine.blur();
             this.$emit('commandRequest', childId);
+        },
+        commandLineError(message) {
+            this.cliError = message;
         },
         focusInput() {
             this.$refs.desktopInput.$refs.commandLine.focus();
