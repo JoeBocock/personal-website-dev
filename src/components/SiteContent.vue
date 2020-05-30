@@ -6,7 +6,10 @@
             :current-content="activeContent"
         />
         <hr class="bottom-hr">
-        <DesktopInput ref="desktopInput"/>
+        <DesktopInput
+            @commandLineRequest="passCommandLineRequest"
+            ref="desktopInput"
+        />
         <hr
             v-bind:class="{ invisible: !blinkingHR, blink: blinkingHR }"
             class="bottom-hr"
@@ -20,7 +23,7 @@ import DesktopInput from './DesktopInput.vue'
 import confetti from 'canvas-confetti'
 
 export default {
-    name: 'PageTitle',
+    name: 'SiteContent',
     components: {
         ContentContainer,
         DesktopInput
@@ -39,8 +42,12 @@ export default {
         }
     },
     methods: {
+        passCommandLineRequest(childId) {
+            this.$refs.desktopInput.$refs.commandLine.blur();
+            this.$emit('commandRequest', childId);
+        },
         focusInput() {
-            this.$refs.desktopInput.$el.focus();
+            this.$refs.desktopInput.$refs.commandLine.focus();
             this.blinkingHR = true;
             setTimeout(() => this.blinkingHR = false, 3000);
         },
