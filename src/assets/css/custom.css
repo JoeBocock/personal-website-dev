@@ -108,7 +108,11 @@ a.no-highlight {
 }
 
 
-/* Input Styling */
+/* Form Styling */
+
+form {
+    margin-bottom: 0;
+}
 
 input[type="text"] {
     border: none;
