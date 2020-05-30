@@ -30,7 +30,7 @@ export default {
             let response = this.validateInput(inputSet);
 
             if (!response.success) {
-                console.log(response.message);
+                 this.$emit('commandLineError', response.message);
             } else {
                 this.$emit('commandLineRequest', this.sections[inputSet[1]]);
                 this.input = '';
