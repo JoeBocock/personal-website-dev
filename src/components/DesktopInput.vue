@@ -47,7 +47,7 @@ export default {
 
             while (response.message.length === 0) {
                 if (!inputSet || inputSet.length !== 2) {
-                    response.message = 'Two arguments required';
+                    response.message = 'Exactly two arguments required';
                     break;
                 }
 
