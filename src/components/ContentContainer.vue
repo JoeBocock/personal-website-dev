@@ -7,9 +7,7 @@
         </div>
 
         <div v-else-if="currentContent == 2">
-            <p>
-                This is page two.
-            </p>
+            <site-timeline :timeline-items="$options.timeline" />
         </div>
 
         <div v-else-if="currentContent == 3">
@@ -27,8 +25,14 @@
 </template>
 
 <script>
+import SiteTimeline from './SiteTimeline.vue';
+import timeline from './../assets/json/timeline.json';
+
 export default {
     name: 'ContentContainer',
+    components: {
+        SiteTimeline
+    },
     props: {
         currentContent: {
             type: Number,
@@ -43,6 +47,7 @@ export default {
         focusInput() {
             this.$emit('focusInput');
         }
-    }
+    },
+    timeline: timeline
 }
 </script>
