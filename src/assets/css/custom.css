@@ -36,7 +36,7 @@
 }
 
 p {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
 }
 
 #version-footer {
@@ -129,4 +129,55 @@ input[type="text"] {
 input[type="text"]:focus {
     outline: none;
     border: none;
+}
+
+/* Timeline Styling */
+
+.timeline-item {
+    border: 1px thin black;
+}
+
+.timeline-item > header {
+    padding: 0.5em 0;
+    padding: 10px;
+    font-style: italic;
+}
+
+.timeline-item > div {
+    padding: 10px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 80px;
+}
+
+.timeline .timeline-item {
+    margin-bottom: 50px;
+    font-size: 1.8rem;
+}
+
+.timeline::before {
+    content: '';
+    background: grey;
+    display: inline-block;
+    position: absolute;
+    left: 34px;
+    width: 1px;
+    height: 100%;
+    z-index: -1;
+}
+
+.timeline .timeline-item::before {
+    content: '';
+    background: white;
+    border: 1px solid rgb(255, 167, 38);
+    border-radius: 10px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 25px;
+    left: 26px;
+    width: 15px;
+    height: 15px;
+    z-index: -1;
 }
