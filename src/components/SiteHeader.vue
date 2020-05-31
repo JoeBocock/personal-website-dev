@@ -21,7 +21,11 @@ export default {
         SiteNavbar
     },
     props: {
-        activeContent : Number
+        activeContent: {
+            type: Number,
+            required: true,
+            validator: value => [1, 2, 3, 4].includes(value)
+        }
     },
     data: function() {
         return {
