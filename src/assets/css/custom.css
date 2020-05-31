@@ -185,3 +185,27 @@ input[type="text"]:focus {
 .timeline-item:hover::before {
     background: rgb(255, 167, 38);
 }
+
+.loading-bar-container {
+    margin-bottom: 7rem;
+}
+
+.loading-bar-container > header {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.loading-bar-container > div {
+    margin-bottom: 2rem;
+    background: rgba(255, 167, 38, 0.2);
+}
+
+.internal-bar {
+    height: 4px;
+    background: rgb(255, 167, 38);
+    width: 0%;
+}
+
+header > small {
+    font-size: 1.3rem;
+}
