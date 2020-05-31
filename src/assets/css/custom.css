@@ -168,7 +168,7 @@ input[type="text"]:focus {
     z-index: -1;
 }
 
-.timeline .timeline-item::before {
+.timeline-item::before {
     content: '';
     background: white;
     border: 1px solid rgb(255, 167, 38);
@@ -180,4 +180,8 @@ input[type="text"]:focus {
     width: 15px;
     height: 15px;
     z-index: -1;
+}
+
+.timeline-item:hover::before {
+    background: rgb(255, 167, 38);
 }
