@@ -37,9 +37,13 @@
         </div>
 
         <div v-else-if="currentContent == 3">
-            <p>
-                This is page three.
-            </p>
+            <StatBar
+                v-for="stat in $options.stats"
+                :key="stat.id"
+                :target="stat.target"
+                :title="stat.title"
+                :sub-title="stat.subTitle"
+            />
         </div>
 
         <div v-else-if="currentContent == 4">
@@ -64,12 +68,15 @@
 
 <script>
 import SiteTimeline from './SiteTimeline.vue';
+import StatBar from './StatBar.vue';
 import timeline from './../assets/json/timeline.json';
+import stats from './../assets/json/stats.json';
 
 export default {
     name: 'ContentContainer',
     components: {
-        SiteTimeline
+        SiteTimeline,
+        StatBar
     },
     props: {
         currentContent: {
@@ -81,11 +88,13 @@ export default {
     methods: {
         requestConfetti() {
             this.$emit('fireConfetti');
+            console.log(this.stats);
         },
         focusInput() {
             this.$emit('focusInput');
         }
     },
-    timeline: timeline
+    timeline: timeline,
+    stats: stats
 }
 </script>
