@@ -44,8 +44,20 @@
 
         <div v-else-if="currentContent == 4">
             <p>
-                This is page four.
+                Thank you for taking the time to read my inane typings. If for whatever reason, you'd like to get in contact with me, please use the email below. I should reply farely quickly but I'm normally faster on weekdays.
             </p>
+
+            <div class="row center">
+                <div class="columns four">
+                    <a href="https://github.com/joebocock" target="_blank" rel="noopener noreferrer">Github</a>
+                </div>
+                <div class="columns four">
+                    <a href="mailto:joebocock@gmail.com">joebocock@gmail.com</a>
+                </div>
+                <div class="columns four">
+                    <a href="https://www.linkedin.com/in/joe-bocock-976341181" target="_blank" rel="noopener noreferrer">Linkden</a>
+                </div>
+            </div>
         </div>
     </div>
 </template>
