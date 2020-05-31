@@ -2,7 +2,7 @@
     <div>
         <div v-if="currentContent == 1">
             <p>
-                I feel like these introductions are normally cheesy, an attempt at <a href="https://www.reddit.com/r/dadjokes/" target="_blank" rel="noopener noreferrer">humour</a> or too much information at once. Or maybe the mere fact that I acknowledged this paragraph like this makes it cheesier than anything else I could've said. <a href="https://www.google.com/search?q=define+huh&oq=define+huh&aqs=chrome..69i57j0l7.3959j1j4&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">Huh.</a>
+                I feel like these introductions are normally cheesy, an attempt at <a href="https://www.reddit.com/r/dadjokes/" target="_blank" rel="noopener noreferrer">humour</a> or too much information at once. Or maybe the mere fact that I acknowledged this paragraph like this makes it cheesier than anything else I could've said. Huh.
             </p>
 
             <p>
