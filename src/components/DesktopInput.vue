@@ -15,7 +15,7 @@ export default {
     data: function() {
         return {
             input: '',
-            inputPrefixes: ['cd', 'nano'],
+            inputPrefixes: ['nano', 'cat'],
             sections: {
                 bio: 1,
                 experience: 2,
