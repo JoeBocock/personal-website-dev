@@ -27,7 +27,7 @@
                 </span>
 
                 <span v-else>
-                    Fancy navigating my site via 'command line?' I've written a handler for it into my Vue input component. Go ahead and <i>cd</i> or <i>nano</i> into any of the sections listed in my navbar. It's kinda a treat for actually reading this far. Just simply click underneath the line below this <a class="option" @click="focusInput()">paragraph</a> and start typing.
+                    Fancy navigating my site via 'command line?' I've written a handler for it into my Vue input component. Go ahead and <i>cat</i> or <i>nano</i> any of the sections listed in my navbar. It's kinda a treat for actually reading this far. Just simply click underneath the line below this <a class="option" @click="focusInput()">paragraph</a> and start typing.
                 </span>
             </p>
         </div>
@@ -88,7 +88,6 @@ export default {
     methods: {
         requestConfetti() {
             this.$emit('fireConfetti');
-            console.log(this.stats);
         },
         focusInput() {
             this.$emit('focusInput');
