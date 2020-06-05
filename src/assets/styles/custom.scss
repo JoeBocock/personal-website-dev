@@ -1,3 +1,11 @@
+/* Variables */
+$vue: #42b983;
+$brand: rgb(255, 167, 38);
+$brand-half-opacity: rgba(255, 167, 38, 0.5);
+$brand-low-opacity: rgba(255, 167, 38, 0.2);
+$dark: #121314;
+$dark-low-opacity: rgba(0, 0, 0, 0.2);
+
 /* General Styling */
 
 @font-face {
@@ -14,7 +22,7 @@
 
 #app {
     -webkit-font-smoothing: antialiased;
-    color: #121314;
+    color: $dark;
 }
 
 .bottom-hr {
@@ -32,7 +40,7 @@
 
 .underline {
     text-decoration: underline;
-    text-decoration-color: rgb(255, 167, 38);
+    text-decoration-color: $brand;
 }
 
 p {
@@ -50,11 +58,11 @@ p {
 /* Color Styling */
 
 .vue-label {
-    color: #42b983;
+    color: $vue;
 }
 
 .brand-color {
-    color: rgb(255, 167, 38);
+    color: $brand;
 }
 
 .error-container {
@@ -86,7 +94,7 @@ h2, h3, h4 {
 /* Link Styling */
 
 #content a {
-    color: #121314;
+    color: $dark;
     position: relative;
     text-decoration: underline;
     text-decoration-color: white;
@@ -101,7 +109,7 @@ h2, h3, h4 {
     right: 1em;
     bottom: 0;
     transition: all 150ms;
-    background-color: rgba(255, 167, 38, 0.5);
+    background-color: $brand-half-opacity;
 }
 
 #content a:hover:after {
@@ -172,7 +180,7 @@ input[type="text"]:focus {
 .timeline-item::before {
     content: '';
     background: white;
-    border: 1px solid rgb(255, 167, 38);
+    border: 1px solid $brand;
     border-radius: 10px;
     display: inline-block;
     position: absolute;
@@ -184,7 +192,7 @@ input[type="text"]:focus {
 }
 
 .timeline-item:hover::before {
-    background: rgb(255, 167, 38);
+    background: $brand;
 }
 
 .loading-bar-container {
@@ -198,12 +206,12 @@ input[type="text"]:focus {
 
 .loading-bar-container > div {
     margin-bottom: 2rem;
-    background: rgba(255, 167, 38, 0.2);
+    background: $brand-low-opacity;
 }
 
 .internal-bar {
     height: 4px;
-    background: rgb(255, 167, 38);
+    background: $brand;
     width: 0%;
 }
 
@@ -213,13 +221,13 @@ header > small {
 
 .card {
     padding-top: 2%;
-    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 2px $dark-low-opacity;
     opacity: 0.9;
     transition: 0.3s;
 }
 
 .card:hover {
-    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 2px $dark-low-opacity;
     opacity: 1;
 }
 
