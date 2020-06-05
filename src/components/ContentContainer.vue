@@ -10,7 +10,7 @@
             </p>
 
             <p>
-                A quick note about this website before I blabber some more about myself. There's quite a few easter eggs, hidden secrets and nifty things I've included. Some developed by myself, others are <a href="https://github.com/JoeBocock/personal-website-dev/blob/master/package.json" target="_blank" rel="noopener noreferrer">libraries</a> I've pulled in. Have a nosey around and see what you can find.
+                A quick note about this website before I blabber some more about myself. There's a couple easter eggs, hidden secrets and nifty things I've included. Some developed by myself, others are <a href="https://github.com/JoeBocock/personal-website-dev/blob/master/package.json" target="_blank" rel="noopener noreferrer">libraries</a> I've pulled in. Have a nosey around and see what you can find.
             </p>
 
             <p>
@@ -37,6 +37,8 @@
         </div>
 
         <div v-else-if="currentContent == 3">
+            <h4>Technical Skill</h4>
+
             <StatBar
                 v-for="stat in $options.stats"
                 :key="stat.id"
@@ -44,6 +46,41 @@
                 :title="stat.title"
                 :sub-title="stat.subTitle"
             />
+
+            <hr>
+
+            <h4>Personal Work</h4>
+
+            <SiteCard
+                title="Cardios"
+                link="https://github.com/JoeBocock/cardios"
+                :content="$options.work.cardios"
+            />
+
+            <SiteCard
+                title="Personal Website"
+                link="https://github.com/JoeBocock/personal-website-dev"
+                :content="$options.work.personal"
+            />
+
+            <SiteCard
+                title="Grab and Go"
+                link="https://github.com/JoeBocock/cardios"
+                :content="$options.work.grabandgo"
+            />
+
+            <SiteCard
+                title="Target Bapper"
+                link="https://github.com/JoeBocock/GrabAndGo"
+                :content="$options.work.targetbapper"
+            />
+
+            <SiteCard
+                title="And Many Others..."
+                link="https://github.com/JoeBocock?tab=repositories"
+                :content="$options.work.other"
+            />
+
         </div>
 
         <div v-else-if="currentContent == 4">
@@ -53,13 +90,21 @@
 
             <div class="row center">
                 <div class="columns four">
-                    <a href="https://github.com/joebocock" target="_blank" rel="noopener noreferrer">Github</a>
+                    <a
+                        href="https://github.com/joebocock"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Github</a>
                 </div>
                 <div class="columns four">
                     <a href="mailto:joebocock@gmail.com">joebocock@gmail.com</a>
                 </div>
                 <div class="columns four">
-                    <a href="https://www.linkedin.com/in/joe-bocock-976341181" target="_blank" rel="noopener noreferrer">Linkden</a>
+                    <a
+                        href="https://www.linkedin.com/in/joe-bocock-976341181"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Linkden</a>
                 </div>
             </div>
         </div>
@@ -69,14 +114,17 @@
 <script>
 import SiteTimeline from './SiteTimeline.vue';
 import StatBar from './StatBar.vue';
+import SiteCard from './SiteCard.vue';
 import timeline from './../assets/json/timeline.json';
 import stats from './../assets/json/stats.json';
+import work from './../assets/json/work.json';
 
 export default {
     name: 'ContentContainer',
     components: {
         SiteTimeline,
-        StatBar
+        StatBar,
+        SiteCard
     },
     props: {
         currentContent: {
@@ -94,6 +142,7 @@ export default {
         }
     },
     timeline: timeline,
-    stats: stats
+    stats: stats,
+    work: work
 }
 </script>
