@@ -19,8 +19,8 @@ export default {
             sections: {
                 bio: 1,
                 experience: 2,
-                work: 3,
-                contact: 4
+                skills: 3,
+                work: 4
             }
         }
     },
