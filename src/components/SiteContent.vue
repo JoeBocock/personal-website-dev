@@ -49,6 +49,7 @@ export default {
     watch: {
         activeContent() {
             this.cliError = '';
+            this.$refs.desktopInput.input = '';
         }
     },
     methods: {
