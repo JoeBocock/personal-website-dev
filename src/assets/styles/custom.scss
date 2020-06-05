@@ -9,14 +9,14 @@ $dark-low-opacity: rgba(0, 0, 0, 0.2);
 /* General Styling */
 
 @font-face {
-    font-family: 'Raleway';
-    src: url('./fonts/Raleway-Light.ttf') format('truetype');
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-Regular.ttf') format('truetype');
     font-weight: 300;
 }
 
 @font-face {
-    font-family: 'Raleway';
-    src:  url('./fonts/Raleway-Thin.ttf') format('truetype');
+    font-family: 'Manrope';
+    src:  url('./fonts/Manrope-Light.ttf') format('truetype');
     font-weight: 100;
 }
 
@@ -78,7 +78,7 @@ h2, h3, h4 {
 
 .title {
     text-align: center;
-    margin-top: 20rem;
+    margin-top: 10rem;
 }
 
 .blink {
