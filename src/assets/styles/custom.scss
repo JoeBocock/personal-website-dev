@@ -72,7 +72,11 @@ p {
 
 /* Title Styling */
 
-h2, h3, h4 {
+h2 {
+    font-weight: 300;
+}
+
+h3, h4 {
     font-weight: 100;
 }
 

@@ -92,12 +92,6 @@
             />
 
             <SiteCard
-                title="Target Bapper"
-                link="https://github.com/JoeBocock/GrabAndGo"
-                :content="$options.work.targetbapper"
-            />
-
-            <SiteCard
                 title="And Many Others..."
                 link="https://github.com/JoeBocock?tab=repositories"
                 :content="$options.work.other"
