@@ -33,7 +33,6 @@ export default {
                  this.$emit('commandLineError', response.message);
             } else {
                 this.$emit('commandLineRequest', this.sections[inputSet[1]]);
-                this.input = '';
             }
         },
         prepareInput(command) {
