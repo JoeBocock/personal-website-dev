@@ -26,8 +26,8 @@ export default {
             items: [
                 { id: 1, text: 'Bio' },
                 { id: 2, text: 'Experience' },
-                { id: 3, text: 'Work' },
-                { id: 4, text: 'Contact' },
+                { id: 3, text: 'Skills' },
+                { id: 4, text: 'Work' }
             ]
         }
     },
