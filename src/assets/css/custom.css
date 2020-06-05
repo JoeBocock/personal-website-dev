@@ -86,9 +86,10 @@ h2, h3, h4 {
 /* Link Styling */
 
 #content a {
-    text-decoration: none;
     color: #121314;
     position: relative;
+    text-decoration: underline;
+    text-decoration-color: white;
 }
 
 #content a:after {
@@ -208,4 +209,42 @@ input[type="text"]:focus {
 
 header > small {
     font-size: 1.3rem;
+}
+
+.card {
+    padding-top: 2%;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+    opacity: 1;
+}
+
+.card-title {
+    padding-top: 3%;
+}
+
+.card-title > h5 {
+    font-weight: 100;
+}
+
+.card-title > a {
+    font-weight: 200;
+    font-size: 2.3rem;
+}
+
+.card-body > hr {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.card-body > p {
+    font-size: 1.6rem;
+}
+
+.tiny-margin-top {
+    margin-top: 5%;
 }
