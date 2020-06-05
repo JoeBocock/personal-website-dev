@@ -27,9 +27,33 @@
                 </span>
 
                 <span v-else>
-                    Fancy navigating my site via 'command line?' I've written a handler for it into my Vue input component. Go ahead and <i>cat</i> or <i>nano</i> any of the sections listed in my navbar. It's kinda a treat for actually reading this far. Just simply click underneath the line below this <a class="option" @click="focusInput()">paragraph</a> and start typing.
+                    Fancy navigating my site via 'command line?' I've written a handler for it into my Vue input component. Go ahead and <i>cat</i> or <i>nano</i> any of the sections listed in my navbar. It's kinda a treat for actually reading this far. Just simply click underneath the final HR on the page or <a class="option" @click="focusInput()">here</a> and start typing.
                 </span>
             </p>
+
+            <p>
+                Thank you for taking the time to read my inane typings. If for whatever reason, you'd like to get in contact with me, please use the email below. I should reply farely quickly but I'm normally faster on weekdays.
+            </p>
+
+            <div class="row center">
+                <div class="columns four">
+                    <a
+                        href="https://github.com/joebocock"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Github</a>
+                </div>
+                <div class="columns four">
+                    <a href="mailto:joebocock@gmail.com">joebocock@gmail.com</a>
+                </div>
+                <div class="columns four">
+                    <a
+                        href="https://www.linkedin.com/in/joe-bocock-976341181"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Linkden</a>
+                </div>
+            </div>
         </div>
 
         <div v-else-if="currentContent == 2">
@@ -37,7 +61,6 @@
         </div>
 
         <div v-else-if="currentContent == 3">
-            <h4>Technical Skill</h4>
 
             <StatBar
                 v-for="stat in $options.stats"
@@ -47,10 +70,9 @@
                 :sub-title="stat.subTitle"
             />
 
-            <hr>
+        </div>
 
-            <h4>Personal Work</h4>
-
+        <div v-else-if="currentContent == 4">
             <SiteCard
                 title="Cardios"
                 link="https://github.com/JoeBocock/cardios"
@@ -80,33 +102,6 @@
                 link="https://github.com/JoeBocock?tab=repositories"
                 :content="$options.work.other"
             />
-
-        </div>
-
-        <div v-else-if="currentContent == 4">
-            <p>
-                Thank you for taking the time to read my inane typings. If for whatever reason, you'd like to get in contact with me, please use the email below. I should reply farely quickly but I'm normally faster on weekdays.
-            </p>
-
-            <div class="row center">
-                <div class="columns four">
-                    <a
-                        href="https://github.com/joebocock"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Github</a>
-                </div>
-                <div class="columns four">
-                    <a href="mailto:joebocock@gmail.com">joebocock@gmail.com</a>
-                </div>
-                <div class="columns four">
-                    <a
-                        href="https://www.linkedin.com/in/joe-bocock-976341181"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >Linkden</a>
-                </div>
-            </div>
         </div>
     </div>
 </template>
