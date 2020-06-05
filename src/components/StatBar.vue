@@ -33,7 +33,7 @@ export default {
     },
     created: function() {
         setInterval(() => {
-            if (this.actual == this.target) {
+            if (this.actual >= this.target) {
                 clearInterval();
             } else {
                 this.actual++;
