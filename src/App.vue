@@ -1,43 +1,28 @@
 <template>
     <div id="app" class="container">
-        <SiteHeader
-            @showContent="activateContent"
-            :active-content="activeContent"
-        />
-        <SiteContent
-            @commandRequest="activateContent"
-            :active-content="activeContent"
-        />
-        <SiteFooter :version="version"/>
+        <div>
+            <button @click="go">Click Here to Animate</button>
+            <div class="block" ref="square" style="background-color: black; width: 100px; height: 100px;"></div>
+        </div>
     </div>
 </template>
 
 <script>
-import SiteHeader from './components/SiteHeader.vue'
-import SiteContent from './components/SiteContent.vue'
-import SiteFooter from './components/SiteFooter.vue'
+import { translate } from './animation/animate';
 
 export default {
     name: 'App',
     components: {
-        SiteHeader,
-        SiteContent,
-        SiteFooter
+
+    },
+    methods: {
+        go() {
+            translate(this.$refs.square);
+        }
     },
     data: function() {
         return {
-            version: "3.0",
-            activeContent: 1,
-        }
-    },
-    watch: {
-        activeContent() {
-            window.scrollTo(0,0);
-        }
-    },
-    methods: {
-        activateContent(contentId) {
-            this.activeContent = contentId;
+
         }
     }
 }

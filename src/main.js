@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import './assets/styles/skeleton.css'
 import './assets/styles/custom.scss'
 
 Vue.config.productionTip = false
