@@ -1,9 +1,18 @@
 /* Variables */
 $brand: rgb(255, 167, 38);
+$background: rgb(238,174,202);
 
+body {
+    margin: 0;
+    background: $background;
+    overflow: hidden;
+}
 
-// @font-face {
-//     font-family: 'Manrope';
-//     src: url('./fonts/Manrope-Regular.ttf') format('truetype');
-//     font-weight: 300;
-// }
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 80vh;
+}
