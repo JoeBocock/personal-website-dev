@@ -1,11 +1,7 @@
 <template>
     <div id="app" class="container">
         <div class="box">
-            <svg
-                width="622.9"
-                height="92.8"
-                viewBox="0 0 622.9 92.8"
-            >
+            <svg width="622.9" height="92.8" viewBox="0 0 622.9 92.8">
                 <g
                     stroke-linecap="round"
                     fill-rule="evenodd"
@@ -59,20 +55,16 @@
 </template>
 
 <script>
-import { lineDraw } from './animation/animate';
+import { lineDraw } from "./animation/animate";
 
 export default {
-    name: 'App',
-    components: {
-
-    },
+    name: "App",
+    components: {},
     mounted: function() {
         lineDraw();
     },
     data: function() {
-        return {
-
-        }
-    }
-}
+        return {};
+    },
+};
 </script>
