@@ -55,10 +55,10 @@
 </template>
 
 <script>
-import { lineDraw } from "./animation/animate";
+import { lineDraw } from './animation/animate';
 
 export default {
-    name: "App",
+    name: 'App',
     components: {},
     mounted: function() {
         lineDraw();
