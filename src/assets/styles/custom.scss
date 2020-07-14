@@ -1,18 +1,70 @@
 /* Variables */
 $brand: rgb(255, 167, 38);
 $background: rgb(238, 174, 202);
+$backgroundtwo: #aba8a3;
 
-body {
-    margin: 0;
-    background: $background;
-    overflow: hidden;
+#app {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    height: 80vh;
+.bg-image {
+    background-image: url('./../images/hills.jpg');
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    z-index: 1;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#window {
+    margin-top: 5%;
+    align-self: center;
+    width: 80%;
+    z-index: 9999;
+    height: 70%;
+    -webkit-box-shadow: 9px 24px 6px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 9px 24px 6px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 9px 24px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 600px) {
+    #window {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+#bar {
+    position: relative;
+    background: rgb(3, 52, 212);
+    background: linear-gradient(
+        0deg,
+        rgba(3, 52, 212, 1) 0%,
+        rgba(0, 113, 251, 1) 100%
+    );
+    align-self: center;
+    top: 0;
+    height: 2.5rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#screen {
+    position: relative;
+    background: #ecead5;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    align-self: center;
+    top: 0;
+    padding-top: 30px;
+    height: 100%;
+    border: #0334d4 solid 8px;
 }
