@@ -1,18 +1,262 @@
 /* Variables */
+$vue: #42b983;
 $brand: rgb(255, 167, 38);
-$background: rgb(238, 174, 202);
+$brand-half-opacity: rgba(255, 167, 38, 0.5);
+$brand-low-opacity: rgba(255, 167, 38, 0.2);
+$dark: #121314;
+$dark-low-opacity: rgba(0, 0, 0, 0.2);
 
-body {
-    margin: 0;
-    background: $background;
-    overflow: hidden;
+/* General Styling */
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-Regular.ttf') format('truetype');
+    font-weight: 300;
 }
 
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    height: 80vh;
+@font-face {
+    font-family: 'Manrope';
+    src:  url('./fonts/Manrope-Light.ttf') format('truetype');
+    font-weight: 100;
+}
+
+#app {
+    -webkit-font-smoothing: antialiased;
+    color: $dark;
+}
+
+.bottom-hr {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.option {
+    cursor: pointer;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: $brand;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+#version-footer {
+    margin-bottom: 5rem;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+/* Color Styling */
+
+.vue-label {
+    color: $vue;
+}
+
+.brand-color {
+    color: $brand;
+}
+
+.error-container {
+    text-align: center;
+    color: #fc2c03;
+}
+
+/* Title Styling */
+
+h2 {
+    font-weight: 300;
+}
+
+h3, h4 {
+    font-weight: 100;
+}
+
+.title {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.blink {
+  animation: blinker 1.2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Link Styling */
+
+#content a {
+    color: $dark;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+#content a:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 65%;
+    left: -0.1em;
+    right: 1em;
+    bottom: 0;
+    transition: all 150ms;
+    background-color: $brand-half-opacity;
+}
+
+#content a:hover:after {
+    top: 0%;
+    right: -0.1em;
+}
+
+a.no-highlight {
+    text-decoration: none !important;
+}
+
+
+/* Form Styling */
+
+form {
+    margin-bottom: 0;
+}
+
+input[type="text"] {
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: none;
+}
+
+/* Timeline Styling */
+
+.timeline-item {
+    border: 1px thin black;
+}
+
+.timeline-item > header {
+    padding: 0.5em 0;
+    padding: 10px;
+    font-style: italic;
+}
+
+.timeline-item > div {
+    padding: 10px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 80px;
+}
+
+.timeline .timeline-item {
+    margin-bottom: 50px;
+    font-size: 1.8rem;
+}
+
+.timeline::before {
+    content: '';
+    background: grey;
+    display: inline-block;
+    position: absolute;
+    left: 34px;
+    width: 1px;
+    height: 100%;
+    z-index: -1;
+}
+
+.timeline-item::before {
+    content: '';
+    background: white;
+    border: 1px solid $brand;
+    border-radius: 10px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 25px;
+    left: 26px;
+    width: 15px;
+    height: 15px;
+    z-index: -1;
+}
+
+.timeline-item:hover::before {
+    background: $brand;
+}
+
+.loading-bar-container {
+    margin-bottom: 7rem;
+}
+
+.loading-bar-container > header {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.loading-bar-container > div {
+    margin-bottom: 2rem;
+    background: $brand-low-opacity;
+}
+
+.internal-bar {
+    height: 4px;
+    background: $brand;
+    width: 0%;
+}
+
+header > small {
+    font-size: 1.3rem;
+}
+
+.card {
+    padding-top: 2%;
+    box-shadow: 0 2px 4px 2px $dark-low-opacity;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 2px $dark-low-opacity;
+    opacity: 1;
+}
+
+.card-title {
+    padding-top: 3%;
+}
+
+.card-title > h5 {
+    font-weight: 100;
+}
+
+.card-title > a {
+    font-weight: 200;
+    font-size: 2.3rem;
+}
+
+.card-body > hr {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.card-body > p {
+    font-size: 1.6rem;
+}
+
+.tiny-margin-top {
+    margin-top: 5%;
 }
