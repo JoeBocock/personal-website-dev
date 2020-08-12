@@ -51,7 +51,7 @@
                         href="https://www.linkedin.com/in/joe-bocock-976341181"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >Linkden</a>
+                    >Linkedin</a>
                 </div>
             </div>
         </div>
