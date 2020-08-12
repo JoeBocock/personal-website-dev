@@ -12,10 +12,14 @@ Vue.prototype.$isMobile = (() =>
         navigator.userAgent
     ))();
 
+window.snake = new Snake('content', [
+    'content',
+    'nav-container',
+    'header-bottom',
+]);
+
+window.snake.notify();
+
 new Vue({
     render: h => h(App),
 }).$mount('#app');
-
-let snake = new Snake(['content']);
-
-snake.setupScene(snake.getTarget());
