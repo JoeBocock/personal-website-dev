@@ -18,14 +18,18 @@ export default class Snake {
         );
     }
 
-    setupScene(empty) {
-        switch (typeof empty) {
+    play() {
+        this.setupScene();
+    }
+
+    setupScene() {
+        switch (typeof this.getEmpty()) {
             case 'string':
-                document.getElementById(empty).innerHTML = '';
+                document.getElementById(this.getEmpty()).innerHTML = '';
                 break;
 
             case 'object':
-                empty.forEach(
+                this.getEmpty().forEach(
                     element => (document.getElementById(element).innerHTML = '')
                 );
                 break;
@@ -34,10 +38,11 @@ export default class Snake {
                 console.log('failed');
                 break;
         }
-    }
 
-    play() {
-        this.setupScene(this.getTarget());
+        let canvas = document.createElement('canvas');
+        canvas.setAttribute('id', 'scene');
+        canvas.classList.add('canvas-container');
+        document.getElementById(this.getTarget()).appendChild(canvas);
     }
 
     /**
