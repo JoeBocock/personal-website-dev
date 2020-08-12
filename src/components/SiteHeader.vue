@@ -6,7 +6,9 @@
             @requestContent="requestContent"
             :active-child="activeContent"
         />
-        <hr />
+        <span id="header-bottom">
+            <hr />
+        </span>
     </section>
 </template>
 

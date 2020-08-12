@@ -1,5 +1,5 @@
 <template>
-    <div class="row center">
+    <div id="nav-container" class="row center">
         <NavbarItem
             v-for="item in items"
             @activateChild="activateChild"
