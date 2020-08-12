@@ -20,6 +20,18 @@ $dark-low-opacity: rgba(0, 0, 0, 0.2);
     font-weight: 100;
 }
 
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('./fonts/Inconsolata-Regular.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src:  url('./fonts/Inconsolata-Light.ttf') format('truetype');
+    font-weight: 100;
+}
+
 #app {
     -webkit-font-smoothing: antialiased;
     color: $dark;
