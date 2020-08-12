@@ -5,10 +5,7 @@
             <small v-if="subTitle">[{{ subTitle }}]</small>
         </header>
         <div>
-            <div
-                :style="{ 'width': actual + '%'}"
-                class="internal-bar"
-            />
+            <div :style="{ width: actual + '%' }" class="internal-bar" />
         </div>
     </div>
 </template>
@@ -20,16 +17,16 @@ export default {
         target: {
             type: Number,
             required: true,
-            validator: value => (value >= 0 && value <= 100)
+            validator: value => value >= 0 && value <= 100,
         },
         title: {
             type: String,
-            required: true
+            required: true,
         },
         subTitle: {
             type: String,
-            required: false
-        }
+            required: false,
+        },
     },
     created: function() {
         setInterval(() => {
@@ -42,8 +39,8 @@ export default {
     },
     data: function() {
         return {
-            actual: 0
-        }
-    }
-}
+            actual: 0,
+        };
+    },
+};
 </script>

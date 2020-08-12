@@ -5,7 +5,7 @@
             v-model="input"
             ref="commandLine"
             type="text"
-        >
+        />
     </form>
 </template>
 
@@ -20,9 +20,9 @@ export default {
                 bio: 1,
                 experience: 2,
                 skills: 3,
-                work: 4
-            }
-        }
+                work: 4,
+            },
+        };
     },
     methods: {
         handleInput() {
@@ -30,18 +30,22 @@ export default {
             let response = this.validateInput(inputSet);
 
             if (!response.success) {
-                 this.$emit('commandLineError', response.message);
+                this.$emit('commandLineError', response.message);
             } else {
                 this.$emit('commandLineRequest', this.sections[inputSet[1]]);
             }
         },
         prepareInput(command) {
-            return command.trim().toLowerCase().split(' ').filter(item => item);
+            return command
+                .trim()
+                .toLowerCase()
+                .split(' ')
+                .filter(item => item);
         },
         validateInput(inputSet) {
             let response = {
                 success: false,
-                message: ''
+                message: '',
             };
 
             while (response.message.length === 0) {
@@ -65,7 +69,7 @@ export default {
             }
 
             return response;
-        }
-    }
-}
+        },
+    },
+};
 </script>

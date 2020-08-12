@@ -5,21 +5,21 @@
             @activateChild="activateChild"
             :item="item"
             :key="item.id"
-            :class="{ 'underline' : activeChild == item.id}"
+            :class="{ underline: activeChild == item.id }"
         />
     </div>
 </template>
 
 <script>
-import NavbarItem from './NavbarItem.vue'
+import NavbarItem from './NavbarItem.vue';
 
 export default {
     name: 'SiteNavbar',
     components: {
-        NavbarItem
+        NavbarItem,
     },
     props: {
-        activeChild: Number
+        activeChild: Number,
     },
     data: function() {
         return {
@@ -27,14 +27,14 @@ export default {
                 { id: 1, text: 'Bio' },
                 { id: 2, text: 'Experience' },
                 { id: 3, text: 'Skills' },
-                { id: 4, text: 'Work' }
-            ]
-        }
+                { id: 4, text: 'Work' },
+            ],
+        };
     },
     methods: {
         activateChild(childId) {
             this.$emit('requestContent', childId);
-        }
-    }
-}
+        },
+    },
+};
 </script>

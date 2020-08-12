@@ -6,18 +6,17 @@
 </template>
 
 <script>
-
 export default {
     name: 'TimelineItem',
     props: {
         title: {
             type: String,
-            required: true
+            required: true,
         },
         content: {
             type: String,
-            required: true
-        }
-    }
-}
+            required: true,
+        },
+    },
+};
 </script>

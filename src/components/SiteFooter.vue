@@ -1,13 +1,12 @@
 <template>
     <section id="footer">
-        <div
-            id="version-footer"
-            class="center"
-        >
-            <small> Version
+        <div id="version-footer" class="center">
+            <small>
+                Version
                 <span class="brand-color">
                     <strong>{{ version }}</strong>
-                </span> | Powered by
+                </span>
+                | Powered by
                 <a
                     href="https://vuejs.org/"
                     target="_blank"
@@ -29,8 +28,8 @@ export default {
     props: {
         version: {
             type: String,
-            required: true
-        }
-    }
-}
+            required: true,
+        },
+    },
+};
 </script>
