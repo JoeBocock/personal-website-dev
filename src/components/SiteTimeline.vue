@@ -10,18 +10,18 @@
 </template>
 
 <script>
-import TimelineItem from './TimelineItem.vue'
+import TimelineItem from './TimelineItem.vue';
 
 export default {
     name: 'SiteTimeline',
     components: {
-        TimelineItem
+        TimelineItem,
     },
     props: {
         timelineItems: {
             type: Object,
-            required: true
-        }
-    }
-}
+            required: true,
+        },
+    },
+};
 </script>

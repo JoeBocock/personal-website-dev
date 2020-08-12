@@ -16,7 +16,7 @@ $dark-low-opacity: rgba(0, 0, 0, 0.2);
 
 @font-face {
     font-family: 'Manrope';
-    src:  url('./fonts/Manrope-Light.ttf') format('truetype');
+    src: url('./fonts/Manrope-Light.ttf') format('truetype');
     font-weight: 100;
 }
 
@@ -28,7 +28,7 @@ $dark-low-opacity: rgba(0, 0, 0, 0.2);
 
 @font-face {
     font-family: 'Inconsolata';
-    src:  url('./fonts/Inconsolata-Light.ttf') format('truetype');
+    src: url('./fonts/Inconsolata-Light.ttf') format('truetype');
     font-weight: 100;
 }
 
@@ -88,7 +88,8 @@ h2 {
     font-weight: 300;
 }
 
-h3, h4 {
+h3,
+h4 {
     font-weight: 100;
 }
 
@@ -98,13 +99,13 @@ h3, h4 {
 }
 
 .blink {
-  animation: blinker 1.2s linear infinite;
+    animation: blinker 1.2s linear infinite;
 }
 
 @keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+    50% {
+        opacity: 0;
+    }
 }
 
 /* Link Styling */
@@ -117,7 +118,7 @@ h3, h4 {
 }
 
 #content a:after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     top: 65%;
@@ -137,21 +138,20 @@ a.no-highlight {
     text-decoration: none !important;
 }
 
-
 /* Form Styling */
 
 form {
     margin-bottom: 0;
 }
 
-input[type="text"] {
+input[type='text'] {
     border: none;
     width: 100%;
     font-size: 1.5rem;
     margin-bottom: 0;
 }
 
-input[type="text"]:focus {
+input[type='text']:focus {
     outline: none;
     border: none;
 }
@@ -277,7 +277,7 @@ header > small {
     font-weight: 100;
     font-size: 2.7rem;
     line-height: 1.35;
-    letter-spacing: -.08rem;
+    letter-spacing: -0.08rem;
     margin-top: 0 !important;
     margin-bottom: 2rem;
     display: block;

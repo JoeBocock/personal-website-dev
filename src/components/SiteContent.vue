@@ -5,7 +5,7 @@
             @focusInput="focusInput"
             :current-content="activeContent"
         />
-        <hr class="bottom-hr">
+        <hr class="bottom-hr" />
         <DesktopInput
             @commandLineRequest="passCommandLineRequest"
             @commandLineError="commandLineError"
@@ -17,40 +17,42 @@
         <hr
             v-bind:class="{ invisible: !blinkingHR, blink: blinkingHR }"
             class="bottom-hr"
-        >
+        />
     </section>
 </template>
 
 <script>
-import ContentContainer from './ContentContainer.vue'
-import DesktopInput from './DesktopInput.vue'
-import confetti from 'canvas-confetti'
+import ContentContainer from './ContentContainer.vue';
+import DesktopInput from './DesktopInput.vue';
+import confetti from 'canvas-confetti';
 
 export default {
     name: 'SiteContent',
     components: {
         ContentContainer,
-        DesktopInput
+        DesktopInput,
     },
     props: {
         activeContent: {
             type: Number,
             required: true,
-            validator: value => [1, 2, 3, 4].includes(value)
-        }
+            validator: value => [1, 2, 3, 4].includes(value),
+        },
     },
     data: function() {
         return {
             cliError: '',
-            confetti: confetti.create(document.getElementById("content"), { resize: true }),
-            blinkingHR: false
-        }
+            confetti: confetti.create(document.getElementById('content'), {
+                resize: true,
+            }),
+            blinkingHR: false,
+        };
     },
     watch: {
         activeContent() {
             this.cliError = '';
             this.$refs.desktopInput.input = '';
-        }
+        },
     },
     methods: {
         passCommandLineRequest(childId) {
@@ -63,10 +65,10 @@ export default {
         focusInput() {
             this.$refs.desktopInput.$refs.commandLine.focus();
             this.blinkingHR = true;
-            setTimeout(() => this.blinkingHR = false, 3000);
+            setTimeout(() => (this.blinkingHR = false), 3000);
         },
         fireConfetti() {
-            let end = Date.now() + (15 * 30);
+            let end = Date.now() + 15 * 30;
             let color = ['#bb0000'];
 
             (function frame() {
@@ -75,21 +77,21 @@ export default {
                     angle: 60,
                     spread: 55,
                     origin: { x: 0 },
-                    colors: color
+                    colors: color,
                 });
                 confetti({
                     particleCount: 1,
                     angle: 120,
                     spread: 55,
                     origin: { x: 1 },
-                    colors: color
+                    colors: color,
                 });
 
                 if (Date.now() < end) {
                     requestAnimationFrame(frame);
                 }
-            }());
-        }
-    }
-}
+            })();
+        },
+    },
+};
 </script>

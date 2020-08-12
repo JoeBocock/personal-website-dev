@@ -1,9 +1,6 @@
 <template>
     <div class="three columns">
-        <span
-            @click="notifyParent"
-            class="option"
-        >{{ item.text }}</span>
+        <span @click="notifyParent" class="option">{{ item.text }}</span>
     </div>
 </template>
 
@@ -14,13 +11,13 @@ export default {
         item: {
             type: Object,
             required: true,
-            validator: value => 'text' in value
-        }
+            validator: value => 'text' in value,
+        },
     },
     methods: {
-        notifyParent: function () {
+        notifyParent: function() {
             this.$emit('activateChild', this.item.id);
-        }
-    }
-}
+        },
+    },
+};
 </script>
