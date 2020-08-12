@@ -1,7 +1,12 @@
+import SnakeEntity from './SnakeEntity.js';
+
 export default class Snake {
     constructor(targetElement = 'app', emptyElement = 'app') {
         this.target = targetElement;
         this.empty = emptyElement;
+        this.context = '';
+        this.canvas = '';
+        this.snake = new SnakeEntity();
     }
 
     getTarget() {
@@ -10,6 +15,14 @@ export default class Snake {
 
     getEmpty() {
         return this.empty;
+    }
+
+    setCanvas(canvas) {
+        this.canvas = canvas;
+    }
+
+    setContext() {
+        this.context = this.canvas.getContext('2d');
     }
 
     isMobile() {
@@ -39,10 +52,22 @@ export default class Snake {
                 break;
         }
 
+        this.buildCanvas();
+        this.setContext();
+
+        this.context.fillRect(10, 10, 10, 10);
+    }
+
+    drawSnake() {}
+
+    drawComponent() {}
+
+    buildCanvas() {
         let canvas = document.createElement('canvas');
         canvas.setAttribute('id', 'scene');
         canvas.classList.add('canvas-container');
         document.getElementById(this.getTarget()).appendChild(canvas);
+        this.setCanvas(canvas);
     }
 
     /**
