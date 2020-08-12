@@ -4,6 +4,7 @@ import Snake from './libs/Snake.js';
 
 import './assets/styles/skeleton.css';
 import './assets/styles/custom.scss';
+import './assets/styles/snake.scss';
 
 Vue.config.productionTip = false;
 
