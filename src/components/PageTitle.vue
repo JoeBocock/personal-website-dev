@@ -1,14 +1,14 @@
 <template>
     <div class="title">
         <h2>{{ title }}</h2>
-        <h4><vue-typer
+        <span id="custom-heading"><vue-typer
             :text="typerItems"
             :erase-delay="eraseDelay"
             :pre-erase-delay="preEraseDelay"
             :pre-type-delay="preTypeDelay"
             caret-animation="phase"
             erase-style="backspace"
-        ></vue-typer></h4>
+        ></vue-typer></span>
     </div>
 </template>
 
