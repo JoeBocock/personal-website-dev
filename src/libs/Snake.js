@@ -7,6 +7,7 @@ export default class Snake {
         this.context = '';
         this.canvas = '';
         this.snake = new SnakeEntity();
+        this.lastRender = 0;
     }
 
     getTarget() {
@@ -55,10 +56,20 @@ export default class Snake {
         this.buildCanvas();
         this.setContext();
 
+        this.y = 10;
+        this.x = 10;
         this.context.fillRect(10, 10, 10, 10);
+
+        this.lastRender = 0;
+        window.requestAnimationFrame(window.loop);
     }
 
-    drawSnake() {}
+    drawSnake() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.context.fillRect(this.x, this.y, 10, 10);
+        this.x++;
+        this.y++;
+    }
 
     drawComponent() {}
 

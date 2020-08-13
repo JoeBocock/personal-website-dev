@@ -21,6 +21,15 @@ window.snake = new Snake('content', [
 
 window.snake.notify();
 
+window.loop = function(timestamp) {
+    var progress = timestamp - window.snake.lastRender;
+    // update(progress);
+    window.snake.drawSnake(progress);
+
+    window.snake.lastRender = timestamp;
+    window.requestAnimationFrame(window.loop);
+};
+
 new Vue({
     render: h => h(App),
 }).$mount('#app');
