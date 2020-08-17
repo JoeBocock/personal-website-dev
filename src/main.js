@@ -23,8 +23,8 @@ window.snake.notify();
 
 window.loop = function(timestamp) {
     var progress = timestamp - window.snake.lastRender;
-    // update(progress);
-    window.snake.drawSnake(progress);
+    window.snake.update(progress);
+    window.snake.draw();
 
     window.snake.lastRender = timestamp;
     window.requestAnimationFrame(window.loop);

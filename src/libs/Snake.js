@@ -8,6 +8,7 @@ export default class Snake {
         this.canvas = '';
         this.snake = new SnakeEntity();
         this.lastRender = 0;
+        this.previousFrame = 0;
     }
 
     getTarget() {
@@ -24,6 +25,9 @@ export default class Snake {
 
     setContext() {
         this.context = this.canvas.getContext('2d');
+        this.context.translate(0.5, 0.5);
+        this.context.lineWidth = 1;
+        this.context.fillStyle = '#FF0000';
     }
 
     isMobile() {
@@ -55,29 +59,70 @@ export default class Snake {
 
         this.buildCanvas();
         this.setContext();
+        this.registerListeners();
 
-        this.y = 10;
-        this.x = 10;
         this.context.fillRect(10, 10, 10, 10);
 
         this.lastRender = 0;
         window.requestAnimationFrame(window.loop);
     }
 
-    drawSnake() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        this.context.fillRect(this.x, this.y, 10, 10);
-        this.x++;
-        this.y++;
+    update(progress) {
+        let difference = progress - this.previousFrame;
+
+        console.log(difference);
+
+        this.previousFrame = progress;
     }
 
-    drawComponent() {}
+    draw() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.context.strokeRect(
+            this.snake.x,
+            this.snake.y,
+            this.snake.width,
+            this.snake.height
+        );
+    }
+
+    registerListeners() {
+        document.addEventListener('keydown', event => {
+            switch (event.keyCode) {
+                case 37:
+                    this.snake.currentDirection = this.snake.moveRight;
+                    // Move Right
+                    break;
+                case 38:
+                    this.snake.currentDirection = this.snake.moveUp;
+                    // Move Up
+                    break;
+                case 39:
+                    this.snake.currentDirection = this.snake.moveLeft;
+                    // Move Left
+                    break;
+                case 40:
+                    this.snake.currentDirection = this.snake.moveDown;
+                    // Move Down
+                    break;
+
+                default:
+                    break;
+            }
+            if (event.keyCode === 39) {
+                return;
+            }
+            // do something
+        });
+    }
 
     buildCanvas() {
         let canvas = document.createElement('canvas');
         canvas.setAttribute('id', 'scene');
-        canvas.classList.add('canvas-container');
-        document.getElementById(this.getTarget()).appendChild(canvas);
+        canvas.setAttribute('width', 510);
+        canvas.setAttribute('height', 510);
+        let parent = document.getElementById(this.getTarget());
+        parent.appendChild(canvas);
+        parent.classList.add('canvas-container');
         this.setCanvas(canvas);
     }
 
