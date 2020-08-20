@@ -1,16 +1,6 @@
 <template>
     <div>
         <div v-if="currentContent == 1">
-            <div class="center">
-                <br />
-                <br />
-                <h4 class="option" @click="requestConfetti()">
-                    🎉 Happy Birthday, Leah 🎉
-                </h4>
-                <br />
-                <br />
-            </div>
-
             <p>
                 I feel like these introductions are normally cheesy, an attempt
                 at
