@@ -1,13 +1,13 @@
 {
     "0": {
         "id": 1,
-        "target": 72,
+        "target": 71,
         "title": "Javascript",
         "subTitle": "General JS, Vue, jQuery"
     },
     "1": {
         "id": 2,
-        "target": 51,
+        "target": 61,
         "title": "PHP",
         "subTitle": "General PHP, Laravel, CodeIgniter"
     },
@@ -19,19 +19,19 @@
     },
     "3": {
         "id": 4,
-        "target": 35,
+        "target": 46,
         "title": "Visual Design",
         "subTitle": "CSS, animation"
     },
     "4": {
         "id": 5,
-        "target": 79,
+        "target": 76,
         "title": "Local Tooling",
         "subTitle": "Vagrant, Git, cli"
     },
     "5": {
         "id": 6,
-        "target": 25,
+        "target": 30,
         "title": "AWS",
         "subTitle": "S3, CP, EB"
     },
