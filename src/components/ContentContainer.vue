@@ -123,21 +123,21 @@
 
         <div v-else-if="currentContent == 4">
             <SiteCard
-                title="Cardios"
-                link="https://github.com/JoeBocock/cardios"
-                :content="$options.work.cardios"
-            />
-
-            <SiteCard
                 title="Personal Website"
                 link="https://github.com/JoeBocock/personal-website-dev"
                 :content="$options.work.personal"
             />
 
             <SiteCard
-                title="Grab and Go"
+                title="CodePen"
+                link="https://codepen.io/joebocock"
+                :content="$options.work.codepen"
+            />
+
+            <SiteCard
+                title="Cardios"
                 link="https://github.com/JoeBocock/cardios"
-                :content="$options.work.grabandgo"
+                :content="$options.work.cardios"
             />
 
             <SiteCard

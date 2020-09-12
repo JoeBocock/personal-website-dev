@@ -1,6 +1,6 @@
 {
     "cardios": "Cardios was more of an experiment in new technology turned fun project. To put it simply, it's a note taking desktop app built with Electron. It's a show of what I could do before I fully embraced the understandings of Javascript. I've improved a lot since its creation and would love to rewrite the entire thing in Vue, should I ever find the time.",
     "personal": "The very site you're looking at. Currently in its third iteration, I'm happy with the way it's turning out. Built with Vue, Vue-Cli and written with 95% of my own CSS, it's definitely my labour of love. I think it's a strong representation of at least my front-end capabilities and hopefully reflects my data oriented approach.",
-    "grabandgo": "A micro-wrapper for IntroJS, developed to solve an ongoing issue in my workplace. Want to implement IntroJS but need to feed the content from an API? Or maybe you just want to shorten all them pesky files that contain the static data? Well then this is for you.",
+    "codepen": "My CodePen doesn't have a massive amount of content right now but I think the stuff that's there is some of the best visual work I've done. While it's definitely not my strong suit, I'm happy with what I've got.",
     "other": "I'm plagued by a very prevalent issue in the developer community. I'm an 'architect' that becomes so concerned with <i>how</i> something should be done that I rarely ever finish. There's new projects popping up all the time on my Github so keep an eye out there if you're interested."
 }
