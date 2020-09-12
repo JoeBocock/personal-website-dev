@@ -22,6 +22,7 @@ export default {
                 skills: 3,
                 work: 4,
             },
+            current: 'bio',
         };
     },
     methods: {
@@ -32,6 +33,7 @@ export default {
             if (!response.success) {
                 this.$emit('commandLineError', response.message);
             } else {
+                this.current = inputSet[1];
                 this.$emit('commandLineRequest', this.sections[inputSet[1]]);
             }
         },
@@ -61,6 +63,11 @@ export default {
 
                 if (!(inputSet[1] in this.sections)) {
                     response.message = 'No such file or directory';
+                    break;
+                }
+
+                if (inputSet[1] === this.current) {
+                    response.message = 'Already viewing file';
                     break;
                 }
 
