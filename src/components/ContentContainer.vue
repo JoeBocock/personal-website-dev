@@ -98,10 +98,10 @@
                 </div>
                 <div class="columns four">
                     <a
-                        href="https://www.linkedin.com/in/joe-bocock-976341181"
+                        href="https://codepen.io/joebocock"
                         target="_blank"
                         rel="noopener noreferrer"
-                        >Linkedin</a
+                        >CodePen</a
                     >
                 </div>
             </div>
