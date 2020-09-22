@@ -2,6 +2,8 @@ set -e
 
 npm run build
 
+cp HOSTREADME.md dist/README.md
+
 cd dist
 
 echo 'joebocock.com' > CNAME
