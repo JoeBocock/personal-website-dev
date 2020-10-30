@@ -26,7 +26,7 @@ export default {
     },
     data: function() {
         return {
-            version: '3.0',
+            version: '3.1.0',
             activeContent: 1,
         };
     },
