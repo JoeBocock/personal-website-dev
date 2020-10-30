@@ -124,8 +124,15 @@
         <div v-else-if="currentContent == 4">
             <SiteCard
                 title="Personal Website"
-                link="https://github.com/JoeBocock/personal-website-dev"
+                link="https://github.com/joebocock/personal-website-dev"
                 :content="$options.work.personal"
+            />
+
+
+            <SiteCard
+                title="Knockt"
+                link="https://github.com/joebocock/knockt"
+                :content="$options.work.knockt"
             />
 
             <SiteCard
@@ -135,14 +142,8 @@
             />
 
             <SiteCard
-                title="Cardios"
-                link="https://github.com/JoeBocock/cardios"
-                :content="$options.work.cardios"
-            />
-
-            <SiteCard
                 title="And Many Others..."
-                link="https://github.com/JoeBocock?tab=repositories"
+                link="https://github.com/joebocock?tab=repositories"
                 :content="$options.work.other"
             />
         </div>
