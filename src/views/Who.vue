@@ -5,7 +5,11 @@
 
     <p>
       Software developer and
-      <vue-typer text="dog lover." erase-delay="1000"></vue-typer>
+      <vue-typer
+        :text="typerItems"
+        erase-delay="1000"
+        pre-type-delay="200"
+      ></vue-typer>
     </p>
   </div>
 </template>
@@ -16,6 +20,16 @@ import { VueTyper } from "vue-typer";
 export default {
   components: {
     VueTyper
+  },
+  data: function() {
+    return {
+      typerItems: [
+        "dog lover.",
+        "vue fanatic.",
+        "data centric.",
+        "AI worshipper."
+      ]
+    };
   }
 };
 </script>
