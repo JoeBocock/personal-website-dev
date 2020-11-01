@@ -3,7 +3,10 @@
     <h1 class="xxl-heading">Hey There,</h1>
     <h1 class="xl-heading">I'm Joe</h1>
 
-    <p>Software developer and <vue-typer text="dog lover."></vue-typer></p>
+    <p>
+      Software developer and
+      <vue-typer text="dog lover." erase-delay="1000"></vue-typer>
+    </p>
   </div>
 </template>
 
