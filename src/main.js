@@ -1,16 +1,10 @@
-import Vue from 'vue';
-import App from './App.vue';
-
-import './assets/styles/skeleton.css';
-import './assets/styles/custom.scss';
-
-Vue.config.productionTip = false;
-
-Vue.prototype.$isMobile = (() =>
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-    ))();
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
 
 new Vue({
-    render: h => h(App),
-}).$mount('#app');
+  router,
+  store,
+  render: h => h(App)
+}).$mount("#app");
