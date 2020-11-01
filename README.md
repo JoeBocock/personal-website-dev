@@ -1,6 +1,4 @@
-# Personal Website Development Repo
-
-The home for development of joebocock.com (joebocock.github.io).
+# joebocock.com
 
 ## Project setup
 
@@ -18,6 +16,12 @@ npm run serve
 
 ```
 npm run build
+```
+
+### Run your unit tests
+
+```
+npm run test:unit
 ```
 
 ### Lints and fixes files
