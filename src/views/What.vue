@@ -5,7 +5,7 @@
     <br /><br />
 
     <div class="cards">
-      <div class="card">PHP</div>
+      <div class="card">PHP <span style="float:right;">59%</span></div>
       <div class="card">Javascript</div>
       <div class="card">Vue</div>
       <div class="card">Laravel</div>
@@ -38,5 +38,23 @@
   border-radius: 5px;
   padding: 1rem;
   font-weight: 700;
+  background: rgb(60, 76, 92);
+  background: -moz-linear-gradient(
+    225deg,
+    rgba(60, 76, 92, 1) 0%,
+    rgba(44, 62, 80, 1) 85%
+  );
+  background: -webkit-linear-gradient(
+    225deg,
+    rgba(60, 76, 92, 1) 0%,
+    rgba(44, 62, 80, 1) 85%
+  );
+  background: linear-gradient(
+    225deg,
+    rgba(60, 76, 92, 1) 0%,
+    rgba(44, 62, 80, 1) 85%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3c4c5c",endColorstr="#2c3e50",GradientType=1);
+  color: $background;
 }
 </style>
