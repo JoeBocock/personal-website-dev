@@ -1,7 +1,6 @@
 <template>
   <div class="what">
-    <h1>This is the what page.</h1>
-    <hr />
+    <input type="email" name="email" placeholder="Search my skillset..." />
     <br /><br />
 
     <div class="cards">
@@ -56,5 +55,25 @@
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3c4c5c",endColorstr="#2c3e50",GradientType=1);
   color: $background;
+}
+
+input {
+  width: 98%;
+  font-size: 2rem;
+  border-bottom: 2px solid rgb(60, 76, 92);
+  min-height: 60px;
+  padding: 10px;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.5s ease;
+  opacity: 0.3;
+}
+
+input:focus {
+  opacity: 1;
 }
 </style>

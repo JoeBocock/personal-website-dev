@@ -26,6 +26,7 @@ export default {
       typerItems: [
         "dog lover.",
         "vue fanatic.",
+        "sometimes dumb.",
         "data centric.",
         "AI worshipper."
       ]
