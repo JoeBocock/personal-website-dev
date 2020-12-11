@@ -43,7 +43,7 @@ export default {
         this.actual++;
       }
     }, 10);
-  },
+  }
 };
 </script>
 
@@ -57,16 +57,23 @@ export default {
 .loading-bar-container > header {
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.loading-bar-container > header > small {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .loading-bar-container > div {
   margin-bottom: 2rem;
-  background: white;
+  background: $primary-low-opacity;
 }
 
 .internal-bar {
   height: 4px;
-  background: black;
+  background: $primary;
   width: 0%;
 }
 </style>

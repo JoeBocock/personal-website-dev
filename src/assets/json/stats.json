@@ -1,5 +1,44 @@
 {
-    {
-
+    "0": {
+        "id": 1,
+        "target": 69,
+        "title": "Javascript",
+        "subTitle": "General JS, Vue, jQuery"
+    },
+    "1": {
+        "id": 2,
+        "target": 75,
+        "title": "PHP",
+        "subTitle": "General PHP, Laravel, CodeIgniter"
+    },
+    "2": {
+        "id": 3,
+        "target": 55,
+        "title": "MySQL",
+        "subTitle": "Database admin, handling complex queries"
+    },
+    "3": {
+        "id": 4,
+        "target": 44,
+        "title": "Visual Design",
+        "subTitle": "CSS, animation"
+    },
+    "4": {
+        "id": 5,
+        "target": 76,
+        "title": "Local Tooling",
+        "subTitle": "Vagrant, Git, cli, Docker"
+    },
+    "5": {
+        "id": 6,
+        "target": 30,
+        "title": "AWS",
+        "subTitle": "S3, CP, EB"
+    },
+    "6": {
+        "id": 7,
+        "target": 74,
+        "title": "Hardware",
+        "subTitle": "Repair, integration, administration"
     }
 }

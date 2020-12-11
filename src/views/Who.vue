@@ -7,8 +7,8 @@
       Software developer and
       <vue-typer
         :text="typerItems"
-        erase-delay="1000"
-        pre-type-delay="200"
+        :erase-delay="eraseDelay"
+        :pre-type-delay="preTypeDelay"
       ></vue-typer>
     </p>
   </div>
@@ -29,7 +29,9 @@ export default {
         "sometimes dumb.",
         "data centric.",
         "AI worshipper."
-      ]
+      ],
+      eraseDelay: 1000,
+      preTypeDelay: 200
     };
   }
 };

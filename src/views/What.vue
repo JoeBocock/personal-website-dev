@@ -11,12 +11,14 @@
 </template>
 
 <style lang="scss">
-@import "../assets/styles/_variables.scss";
+.what {
+  margin-top: 70px;
+}
 </style>
 
 <script>
 import StatBar from "../components/StatBar.vue";
-// import stats from "./../assets/json/stats.json";
+import stats from "./../assets/json/stats.json";
 
 export default {
   name: "App",
@@ -39,6 +41,6 @@ export default {
       this.activeContent = contentId;
     }
   },
-//   stats: stats
+  stats: stats
 };
 </script>
