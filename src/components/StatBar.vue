@@ -52,6 +52,8 @@ export default {
 
 .loading-bar-container {
   margin-bottom: 7rem;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .loading-bar-container > header {
