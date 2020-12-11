@@ -30,6 +30,11 @@ export default {
       required: false
     }
   },
+  data: function() {
+    return {
+      actual: 0
+    };
+  },
   created: function() {
     setInterval(() => {
       if (this.actual >= this.target) {
@@ -39,11 +44,6 @@ export default {
       }
     }, 10);
   },
-  data: function() {
-    return {
-      actual: 0
-    };
-  }
 };
 </script>
 
@@ -61,12 +61,12 @@ export default {
 
 .loading-bar-container > div {
   margin-bottom: 2rem;
-  background: $brand-low-opacity;
+  background: white;
 }
 
 .internal-bar {
   height: 4px;
-  background: $brand;
+  background: black;
   width: 0%;
 }
 </style>
