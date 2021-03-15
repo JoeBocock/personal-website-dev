@@ -1,15 +1,13 @@
 <template>
-  <div class="what">
     <div class="loading-bar-container">
-      <header>
-        {{ title }}
-        <small v-if="subTitle">[{{ subTitle }}]</small>
-      </header>
-      <div>
-        <div :style="{ width: actual + '%' }" class="internal-bar" />
-      </div>
+        <header>
+            {{ title }}
+            <small v-if="subTitle">[{{ subTitle }}]</small>
+        </header>
+        <div>
+            <div :style="{ width: actual + '%' }" class="internal-bar" />
+        </div>
     </div>
-  </div>
 </template>
 
 <script>

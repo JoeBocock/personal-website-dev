@@ -24,11 +24,12 @@ export default {
   data: function() {
     return {
       typerItems: [
-        "dog lover.",
+        "dog obsessed.",
         "vue fanatic.",
-        "sometimes dumb.",
+        "sick of being at home.",
         "data centric.",
-        "AI worshipper."
+        "sometimes dumb.",
+        "AI worshipper.",
       ],
       eraseDelay: 1000,
       preTypeDelay: 200

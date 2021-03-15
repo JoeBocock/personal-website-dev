@@ -25,22 +25,6 @@ export default {
   components: {
     StatBar
   },
-  data: function() {
-    return {
-      version: "3.1.0",
-      activeContent: 1
-    };
-  },
-  watch: {
-    activeContent() {
-      window.scrollTo(0, 0);
-    }
-  },
-  methods: {
-    activateContent(contentId) {
-      this.activeContent = contentId;
-    }
-  },
   stats: stats
 };
 </script>
